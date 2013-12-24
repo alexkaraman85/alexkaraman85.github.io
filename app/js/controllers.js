@@ -20,3 +20,8 @@ phonecatControllers.controller('PhoneDetailCtrl', ['$scope', '$routeParams', 'Ph
       $scope.mainImageUrl = imageUrl;
     }
   }]);
+
+phonecatControllers.controller('IHListCtrl', ['$scope', 'IH',
+  function($scope, IH) {
+    $scope.phones = IH.query();
+  }]);
